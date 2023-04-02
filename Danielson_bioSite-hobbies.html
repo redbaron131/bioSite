@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="CSD 340 Development with HTML and CSS">
+	<meta name="author" content="Andrew Danielson">
+	<meta name="keywords" content="HTML, CSS, development, web design">
+
+	<link rel="stylesheet" type="text/css" href="Danielson_bioSite.css">	
+
+	<title>Heidi's bioSite</title>
+  </head>
+ <style>
+    body {
+      background-color: #f7e1f5;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #af7ac5;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: white;
+      font-size: 50px;
+      margin-top: 0;
+    }
+
+    nav {
+      background-color: #edd7f9;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      display: inline-block;
+      padding: 10px;
+      color: #5b226f;
+      font-size: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #d2a5d0;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h2 {
+      color: #5b226f;
+      font-size: 30px;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+	section {
+	width: 100%;
+	margin: 0 auto;
+	}
+
+    .image-container {
+      display: flex;
+  	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+	max-width: none;
+    }
+
+    .image-container figure {
+      margin: 0 10px 20px;
+      text-align: center;
+      width: 33%;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    footer {
+      background-color: #af7ac5;
+      color: #FDEEF4;
+    }
+
+  </style>
+
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="Danielson_bioSite.html">Home</a></li>
+        <li><a href="Danielson_bioSite-about.html">About</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Heidi's Hobbies</h1>
+    </header>
+    <main>
+      <section>
+  <h2>Cricut Crafting</h2>
+  <div class="image-container">
+    <figure>
+      <img src="images/Canvas.jpg" alt="Canvas">
+      <figcaption>(End of School Year Gift to one of our childrens teacher's)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Shirt1.jpg" alt="Shirt 1">
+      <figcaption>(One of the more difficult shirts she has made)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Shirt2.jpg" alt="Shirt 2">
+      <figcaption>(Heidi made identical shirts for everyone)</figcaption>
+    </figure>
+  </div>
+   <p>Cricuit .</p>
+</section>
+
+      <section>
+        <h2>Travel and School</h2>
+  <div class="image-container">
+    <figure>
+      <img src="images/20230327_160334.jpg" alt="Castle">
+      <figcaption>(Neuschwanstein Castle in Winter 2023)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Masters_of_Nursing.jpg" alt="MSN">
+      <figcaption>(Masters of Nursing)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/boise.jpg" alt="Boise">
+      <figcaption>(Boise)</figcaption>
+    </figure>
+  </div>
+        <p>Travel and School.</p>
+      </section>
+      <section>
+        <h2>Family Life</h2>
+  <div class="image-container">
+    <figure>
+      <img src="images/20220807_130554.jpg" alt="Germany">
+      <figcaption>(Hiking to a 15th Century German Castle)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/20221126_133556.jpg" alt="Family Eifel Tower">
+      <figcaption>(Family in front of Eifel Tower)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/20221125_110519.jpg" alt="Olaf">
+      <figcaption>(Meeting our favorite Snowman)</figcaption>
+    </figure>
+  </div>
+        <p>Family Life.</p>
+      </section>
+    </main>
+    <footer>
+    <p>&copy; 2023 Andrew Danielson. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
