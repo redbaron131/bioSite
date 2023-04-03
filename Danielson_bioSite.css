@@ -98,54 +98,117 @@ footer {
 footer p {
 	margin: 0;
 }
+
 /* Define grid container */
-#image-gallery {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-	/* Set the column width and allow them to wrap */
-	grid-gap: 0px;
-	/* Set the gap between grid items */
-	justify-content: center;
-	/* Center the grid horizontally */
-	margin-top: 10%;
+#image-gallery,
+#image-gallery2,
+#image-gallery3 {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
 }
+
 /* Define grid item */
 .image-container {
-	border: 2px solid black;
-	/* add solid black border */
-	box-sizing: border-box;
-	/* include border width in element width calculation */
-	padding: 10px;
-	/* add padding to create margin inside the container */
-	text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 10px; /* add padding to create margin inside the container */
+  text-align: center;
+  margin: 10px;
+  cursor: pointer; /* add cursor pointer to indicate clickability */
 }
-.image-container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	width: 100%;
-	max-width: none;
-}
-.image-container figure {
-	margin: 0 10px 20px;
-	text-align: center;
-	width: 33%;
-}
+
 .image-container img {
-	max-width: 100%;
-	height: auto;
-	object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
-.image-container h3 {
-	margin-top: 0;
-	margin-bottom: 10px;
-	text-align: center;
-	color: rgba(0, 0, 0, 1);
-	/* Optional color */
+
+/* Show full size image on click */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 50%;
+  overflow: auto;
+  background-color: #fff;
 }
-.image-container figcaption {
-	font-style: italic;
-	font-size: 0.75em;
-	color: rgba(0, 0, 0, 1);
-	/* Optional color */
+
+.modal-content {
+  display: block;
+  margin: auto;
+  width: 80%;
+  max-width: 800px;
+  max-height: 80%;
 }
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Show the modal on click 
+.image-container img:hover,
+.image-container img:focus {
+  opacity: 0.7;
+}*/
+
+.image-container img:hover + .modal,
+.image-container img:focus + .modal {
+  display: block;
+}
+
+/* Hide the modal on close button click */
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Expanded image */
+.expanded {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.expanded img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.expanded .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+

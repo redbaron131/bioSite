@@ -8,6 +8,9 @@
 	<meta name="author" content="Andrew Danielson">
 	<meta name="keywords" content="HTML, CSS, development, web design">
 
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="script.js"></script>
+
 	<link rel="stylesheet" type="text/css" href="Danielson_bioSite.css">	
 
 	<title>Heidi's bioSite</title>
@@ -68,32 +71,7 @@
       margin-bottom: 20px;
     }
 
-	section {
-	width: 100%;
-	margin: 0 auto;
-	}
-
-    .image-container {
-      display: flex;
-  	flex-wrap: wrap;
-	justify-content: center;
-	width: 100%;
-	max-width: none;
-    }
-
-    .image-container figure {
-      margin: 0 10px 20px;
-      text-align: center;
-      width: 33%;
-    }
-
-    .image-container img {
-      max-width: 100%;
-      height: auto;
-      object-fit: contain;
-    }
-
-    footer {
+     footer {
       background-color: #af7ac5;
       color: #FDEEF4;
     }
@@ -114,16 +92,16 @@
     <main>
       <section>
   <h2>Cricut Crafting</h2>
-  <div class="image-container">
-    <figure>
+  <div id="image-gallery">
+    <figure class="image-container">
       <img src="images/Canvas.jpg" alt="Canvas">
       <figcaption>(End of School Year Gift to one of our childrens teacher's)</figcaption>
     </figure>
-    <figure>
+      <figure class="image-container">
       <img src="images/Shirt1.jpg" alt="Shirt 1">
       <figcaption>(One of the more difficult shirts she has made)</figcaption>
     </figure>
-    <figure>
+     <figure class="image-container">
       <img src="images/Shirt2.jpg" alt="Shirt 2">
       <figcaption>(Heidi made identical shirts for everyone)</figcaption>
     </figure>
@@ -133,16 +111,16 @@
 
       <section>
         <h2>Travel and School</h2>
-  <div class="image-container">
-    <figure>
+  <div id="image-gallery2">
+    <figure class="image-container">
       <img src="images/20230327_160334.jpg" alt="Castle">
       <figcaption>(Neuschwanstein Castle in Winter 2023)</figcaption>
     </figure>
-    <figure>
+       <figure class="image-container">
       <img src="images/Masters_of_Nursing.jpg" alt="MSN">
       <figcaption>(Masters of Nursing)</figcaption>
     </figure>
-    <figure>
+      <figure class="image-container">
       <img src="images/boise.jpg" alt="Boise">
       <figcaption>(Boise)</figcaption>
     </figure>
@@ -151,16 +129,16 @@
       </section>
       <section>
         <h2>Family Life</h2>
-  <div class="image-container">
-    <figure>
+  <div id="image-gallery3">
+    <figure class="image-container">
       <img src="images/20220807_130554.jpg" alt="Germany">
       <figcaption>(Hiking to a 15th Century German Castle)</figcaption>
     </figure>
-    <figure>
+       <figure class="image-container">
       <img src="images/20221126_133556.jpg" alt="Family Eifel Tower">
       <figcaption>(Family in front of Eifel Tower)</figcaption>
     </figure>
-    <figure>
+      <figure class="image-container">
       <img src="images/20221125_110519.jpg" alt="Olaf">
       <figcaption>(Meeting our favorite Snowman)</figcaption>
     </figure>
