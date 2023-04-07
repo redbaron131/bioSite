@@ -1,104 +1,115 @@
 /* Typography */
 body {
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	line-height: 1.5;
-	color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
 }
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Montserrat', sans-serif;
-	font-weight: bold;
-	margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin: 0;
 }
 h1 {
-	font-size: 48px;
-	line-height: 1.2;
-	color: #333;
+  font-size: 48px;
+  line-height: 1.2;
+  color: #333;
 }
 h2 {
-	font-size: 36px;
-	line-height: 1.2;
-	color: #333;
+  font-size: 36px;
+  line-height: 1.2;
+  color: #333;
 }
 h3 {
-	font-size: 24px;
-	line-height: 1.2;
-	color: #333;
-}
-p {
-	margin: 0 0 1rem;
-}
-a {
-	color: #6e80b2;
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: underline;
-}
-/* Layout */
-.container {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 1rem;
-}
-header {
-	background-color: #f2f2f2;
-	padding: 1rem;
-	text-align: center;
-}
-nav {
-	display: flex;
-	justify-content: center;
-	margin: 1rem 0;
-}
-nav a {
-	margin: 0 1rem;
-	font-size: 24px;
-	font-weight: bold;
-}
-main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 1rem;
-}
-section {
-	width: 100%;
-	max-width: 1000px;
-	margin-bottom: 2rem;
-}
-section h2 {
-	text-align: center;
-	margin-bottom: 1rem;
-}
-section p {
-	text-align: justify;
-	text-justify: inter-word;
-}
-img {
-	max-width: 100%;
-	height: auto;
-	margin: 1rem 0;
-}
-/* Float and margin the bottom div */
-.bottom {
-	float: right;
-	margin-bottom: 20px;
-}
-#last-div {
-	margin-top: 60px;
-	text-align: right;
-}
-footer {
-	background-color: #333;
-	color: #f2f2f2;
-	padding: 1rem;
-	text-align: center;
-}
-footer p {
-	margin: 0;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #333;
 }
 
+
+figcaption {
+  margin-top: 10px;
+
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  margin-top: 150px;
+}
+a {
+  color: #6e80b2;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+header {
+  background-color: #f2f2f2;
+  padding: 1rem;
+  text-align: center;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+nav a {
+  margin: 0 1rem;
+  font-size: 24px;
+  font-weight: bold;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+section {
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 2rem;
+}
+section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+section p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+
+/* Float and margin the bottom div */
+.bottom {
+  float: right;
+  margin-bottom: 20px;
+}
+#last-div {
+  margin-top: 60px;
+  text-align: right;
+}
+footer {
+  background-color: #333;
+  color: #f2f2f2;
+  padding: 1rem;
+  text-align: center;
+}
+footer p {
+  margin: 0;
+}
 /* Define grid container */
 #image-gallery,
 #image-gallery2,
@@ -114,16 +125,18 @@ footer p {
   flex-wrap: wrap;
   justify-content: center;
   box-sizing: border-box;
-  padding: 10px; /* add padding to create margin inside the container */
+  padding: 10px; 
   text-align: center;
   margin: 10px;
   cursor: pointer; /* add cursor pointer to indicate clickability */
+  height: 300px;
+  position: relative; /* add position relative for child element positioning */
 }
 
 .image-container img {
+  object-fit: contain;
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
 }
 
 /* Show full size image on click */
@@ -150,7 +163,9 @@ footer p {
 .modal-content img {
   max-width: 100%;
   max-height: 100%;
+  object-fit: contain;
 }
+
 
 /* Close button */
 .close {
@@ -163,12 +178,7 @@ footer p {
   cursor: pointer;
 }
 
-/* Show the modal on click 
-.image-container img:hover,
-.image-container img:focus {
-  opacity: 0.7;
-}*/
-
+/* Show the modal on click */
 .image-container img:hover + .modal,
 .image-container img:focus + .modal {
   display: block;
@@ -184,22 +194,23 @@ footer p {
 
 /* Expanded image */
 .expanded {
+  width: auto;
+  max-height: 90%;
   position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 999;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  cursor: pointer;
+  background-color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .expanded img {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* add object-fit to maintain aspect ratio */
 }
 
 .expanded .close {
@@ -212,3 +223,32 @@ footer p {
   cursor: pointer;
 }
 
+/* Prevent transparency of expanded image and grid */
+.image-container:hover,
+.expanded:hover {
+  opacity: 1;
+}
+
+/* Make sure close button is visible */
+.expanded .close:hover,
+.expanded .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+}
+
+
+/* Show expanded image on click */
+.image-container img:hover + .expanded,
+.image-container img:focus + .expanded {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hide expanded image on click */
+.expanded:hover,
+.expanded:focus {
+  display: none;
+}
