@@ -1,4 +1,4 @@
-/* Typography */
+/* Typography for all pages unless changed below*/
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -36,7 +36,7 @@ p {
   font-size: 20px;
   line-height: 1.5;
   margin-bottom: 20px;
-  margin-top: 150px;
+  margin-top: 15px;
 }
 a {
   color: #6e80b2;
@@ -46,7 +46,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Layout */
+/* Layout for all pages unless changed in HTML or below*/
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -110,16 +110,18 @@ footer {
 footer p {
   margin: 0;
 }
-/* Define grid container */
+/* Define grid container for hobbies page */
 #image-gallery,
 #image-gallery2,
 #image-gallery3 {
   display: flex;
   justify-content: center;
   margin-top: 10%;
+  margin-bottom: 10%;
+
 }
 
-/* Define grid item */
+
 .image-container {
   display: flex;
   flex-wrap: wrap;
@@ -138,6 +140,41 @@ footer p {
   max-width: 100%;
   max-height: 100%;
 }
+
+/* Define grid item for about page */
+#about-page #about-image-gallery {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+
+}
+
+#about-page .image-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 10px; 
+  text-align: center;
+  margin: 10px;
+  cursor: pointer; /* add cursor pointer to indicate clickability */
+  height: 400px;
+  position: relative; /* add position relative for child element positioning */
+}
+
+#about-page figcaption {
+  margin-top: 10px;
+
+}
+
+#about-page {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 
 /* Show full size image on click */
 .modal {
