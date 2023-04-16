@@ -1,4 +1,9 @@
-/* Typography for all pages unless changed below*/
+/* CSS styles */
+h1 {
+font-family: Impact, sans-serif;
+color: #CE5937;
+}
+	  /* Typography for all pages unless changed below*/
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -116,8 +121,8 @@ footer p {
 #image-gallery3 {
   display: flex;
   justify-content: center;
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 
 }
 
@@ -127,9 +132,9 @@ footer p {
   flex-wrap: wrap;
   justify-content: center;
   box-sizing: border-box;
-  padding: 5px; 
+  padding: 10px; 
   text-align: center;
-  margin: 5px;
+  margin: px;
   cursor: pointer; /* add cursor pointer to indicate clickability */
   height: 500px;
   position: relative; /* add position relative for child element positioning */
@@ -140,7 +145,12 @@ footer p {
   max-width: 100%;
   max-height: 100%;
 }
-
+#hobbies paragraph {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  margin-top: 5%;
+}
 /* Define grid item for about page */
 #about-image-gallery {
   display: flex;
